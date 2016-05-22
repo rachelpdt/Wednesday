@@ -2,9 +2,6 @@
 //jQuery(".warning").hide(); + jQuery(".warning").show("slow");
 //Show Warning Slowly
 
+//$('h:contains("Answer")').text("$6,500");
 
-function myCode() {
-  $(".warning").hide().show("slow");
-}
-
- $(document).ready(myCode);
+$('.main-content > span').text('$6,500');

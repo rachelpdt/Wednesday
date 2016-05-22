@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Can Change Images</h1>
+
+<img id="myImage" onclick="changeImage()" src="DSC_1976.JPG" width="3840" height="2160">
+
+<p>Change Landscape</p>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("DSC_2024")) {
+        image.src = "DSC_1976.JPG";
+    } else {
+        image.src = "DSC_2024.JPG";
+    }
+}
+</script>
+
+</body>
+</html>
