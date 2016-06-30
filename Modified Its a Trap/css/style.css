@@ -1,0 +1,35 @@
+body {
+  background: #2d3339
+}
+.greeting {
+  border: 8px solid #ffFf10;
+  width: 900px;
+  margin: 100px auto 20px;
+  border-radius: 5px;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 48px
+}
+.greeting span {
+  color: #D4f3ce;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.image {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  z-index: -1
+}
+/* Country list */
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  color: #FFFFFF;
+}
+
+h3 {
+  color: #f4f3de;
+  padding: 10px 0;
+}
