@@ -19,7 +19,7 @@ function canSubmit() {
 }
 
 function passwordEvent(){
-    //Find out if password is valid  
+    //Find out if password is valid
     if(isPasswordValid()) {
       //Hide hint if valid
       $password.next().hide();
@@ -35,7 +35,7 @@ function confirmPasswordEvent() {
     //Hide hint if match
     $confirmPassword.next().hide();
   } else {
-    //else show hint 
+    //else show hint
     $confirmPassword.next().show();
   }
 }
@@ -51,12 +51,3 @@ $password.focus(passwordEvent).keyup(passwordEvent).keyup(confirmPasswordEvent).
 $confirmPassword.focus(confirmPasswordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
 
 enableSubmitEvent();
-
-
-
-
-
-
-
-
-
