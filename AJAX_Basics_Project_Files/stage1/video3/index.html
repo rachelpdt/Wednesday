@@ -6,7 +6,24 @@
   <link rel="stylesheet" href="css/main.css">
   <title>AJAX with JavaScript</title>
   <script>
- var hxr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function (){
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+        document.getElementById('ajax').innerHTML = xhr.responseText;
+        } else if (xhr.status === 404 ) {
+          //File not found
+        } else if (xhr.status === 500 ) {
+          //Server had a problem
+        }
+      }
+    };
+    xhr.open('GET', 'sidebar.html');
+    function sendAJAX(){
+      xhr.send();
+      document.getElementById('load').style.display = "none";
+    }
+
   </script>
 </head>
 <body>
@@ -16,6 +33,7 @@
         <div class="grid-100">
           <div class="heading">
             <h1>Bring on the AJAX</h1>
+            <button id="load" onclick="sendAJAX()">Bring it!</button>
           </div>
           <ul id="ajax">
 
