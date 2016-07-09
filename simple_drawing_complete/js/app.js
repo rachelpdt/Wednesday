@@ -15,7 +15,7 @@ $(".controls").on("click", "li", function(){
   //cache current color
   color = $(this).css("background-color");
 });
-  
+
 //When "New Color" is pressed
 $("#revealColorSelect").click(function(){
   //Show color select or hide the color select
@@ -63,14 +63,3 @@ $canvas.mousedown(function(e){
 }).mouseleave(function(){
   $canvas.mouseup();
 });
-
-
-
-  
-
-
-
-
-
-
-

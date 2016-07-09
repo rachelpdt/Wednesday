@@ -21,19 +21,19 @@ var createNewTaskElement = function(taskString) {
   var editButton = document.createElement("button");
   //button.delete
   var deleteButton = document.createElement("button");
-  
+
   //Each element needs modifying
-  
+
   checkBox.type = "checkbox";
   editInput.type = "text";
-  
+
   editButton.innerText = "Edit";
   editButton.className = "edit";
   deleteButton.innerText = "Delete";
   deleteButton.className = "delete";
-  
+
   label.innerText = taskString;
-  
+
   //Each element needs appending
   listItem.appendChild(checkBox);
   listItem.appendChild(label);
@@ -52,7 +52,7 @@ var addTask = function() {
   //Append listItem to incompleteTasksHolder
   incompleteTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
-  
+
   taskInput.value = "";
 }
 
@@ -61,12 +61,12 @@ var editTask = function() {
   console.log("Edit task...");
 
   var listItem = this.parentNode;
-  
+
   var editInput = listItem.querySelector("input[type=text");
   var label = listItem.querySelector("label");
-  
+
   var containsClass = listItem.classList.contains("editMode");
-  
+
   //if the class of the parent is .editMode
   if(containsClass) {
     //Switch from .editMode
@@ -77,10 +77,10 @@ var editTask = function() {
     //input value becomes the label's text
     editInput.value = label.innerText;
   }
-  
+
   //Toggle .editMode on the list item
   listItem.classList.toggle("editMode");
-  
+
 }
 
 //Delete an existing task
@@ -88,7 +88,7 @@ var deleteTask = function() {
   console.log("Delete task...");
   var listItem = this.parentNode;
   var ul = listItem.parentNode;
-  
+
   //Remove the parent list item from the ul
   ul.removeChild(listItem);
 }
@@ -117,13 +117,13 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
   var checkBox = taskListItem.querySelector("input[type=checkbox]");
   var editButton = taskListItem.querySelector("button.edit");
   var deleteButton = taskListItem.querySelector("button.delete");
-  
+
   //bind editTask to edit button
   editButton.onclick = editTask;
-  
+
   //bind deleteTask to delete button
   deleteButton.onclick = deleteTask;
-  
+
   //bind checkBoxEventHandler to checkbox
   checkBox.onchange = checkBoxEventHandler;
 }
@@ -147,36 +147,3 @@ for(var i = 0; i < completedTasksHolder.children.length; i++) {
   //bind events to list item's children (taskIncomplete)
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
