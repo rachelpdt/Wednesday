@@ -20,18 +20,3 @@ Movie.prototype.toHTML = function() {
   htmlString += '</span></li>';
   return htmlString;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
