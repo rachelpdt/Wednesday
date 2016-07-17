@@ -11,6 +11,6 @@ $(document).ready(function () {
       function displayPhotos(data) {
 
       }
-      $.getJSON(flickerAPI, flickrData, displayPhotos);
+      $.getJSON(flickerAPI, flickrOptions, displayPhotos);
   });
 }); // end ready
